@@ -1,0 +1,905 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6600;
+  padding: 10px 20px;
+  color: white;
+}
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links .login-btn {
+  background: white;
+  color: #ff6600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2cf404; /* Attractive orange */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  color: #fbff06; /* Darker orange */
+  transform: scale(1.1);
+}
+
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+  position: fixed bottom 0;
+  width: 100%;
+  bottom: 0;
+}
+/* Home Page Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Home Title */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.home-title:hover {
+  transform: scale(1.1);
+  color: #06f906;
+}
+
+/* Home Description */
+.home-description {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  max-width: 600px;
+  margin-bottom: 30px;
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Section Title */
+.home-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Card */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Load More Button */
+.load-more {
+  margin-top: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.load-more:hover {
+  background-color: #ff4f4f;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  .home-description {
+    font-size: 1rem;
+  }
+}
+
+/* Login Styling */
+/* Centering the login form */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Stylish Card for Login Form */
+.login-page form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading Style */
+.login-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff5722;
+  font-size: 24px;
+}
+
+/* Input Fields */
+.login-page input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.login-page input:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+  outline: none;
+}
+
+/* Login Button */
+.login-page button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.login-page button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Centering the register form */
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Stylish Card for Register Form */
+.register-page form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+/* Heading Style */
+.register-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4c2a85;
+  font-size: 24px;
+}
+
+/* Input Fields */
+.register-page input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.register-page input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.5);
+  outline: none;
+}
+
+/* Register Button */
+.register-page button {
+  background: #4c2a85;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.register-page button:hover {
+  background: #332255;
+  transform: scale(1.05);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Admin page */
+.admin-panel {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+/* Dashboard Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Manage Sections */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #4ca1af;
+  color: white;
+}
+
+.add-btn {
+  padding: 10px 15px;
+  background: #4ca1af;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #357a83;
+}
+
+/* recipe page */
+.recipes-page {
+  padding: 40px 5%;
+  background: linear-gradient(to bottom, #ffefba, #ffffff);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.recipes-page h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.recipe-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.view-details {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff6600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.view-details:hover {
+  background-color: #e05500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-card img {
+    height: 150px;
+  }
+
+  .recipe-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .view-details {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+/* recipe detail page */
+.recipe-detail {
+  padding: 40px 5%;
+  background: linear-gradient(to bottom, #ffefba, #ffffff);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.recipe-detail h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.recipe-detail img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.recipe-detail p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.recipe-detail h3 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.recipe-detail ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-detail ul li {
+  font-size: 1.2rem;
+  color: #444;
+  padding: 8px 0;
+  background: #fff4e3;
+  margin: 5px auto;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-detail img {
+    max-width: 100%;
+  }
+
+  .recipe-detail h2 {
+    font-size: 2rem;
+  }
+
+  .recipe-detail h3 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-detail ul li {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+/* blog */
+.blog-page {
+  padding: 40px 5%;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.blog-page h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+/* blog post */
+.blog-post {
+  padding: 40px 5%;
+  text-align: center;
+  background: #fffdf8;
+}
+
+.blog-post h2 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.blog-post .blog-date {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-post img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-post p {
+  font-size: 1.2rem;
+  color: #444;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* About Page */
+.about-page, .contact-page, .notfound-page {
+  padding: 40px 5%;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.about-page h2, .contact-page h2, .notfound-page h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.about-page p, .contact-page p, .notfound-page p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form div {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Not Found Page */
+.notfound-page a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.notfound-page a:hover {
+  text-decoration: underline;
+}
+.logout-btn {
+  background-color: #17bde6; /* Soft red */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e60000; /* Darker red on hover */
+  transform: scale(1.05); /* Slight pop effect */
+}
+
+.logout-btn:active {
+  transform: scale(0.95); /* Click effect */
+}
+/* Add User Section */
+.add-user-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.add-user-form input,
+.add-user-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-user-form button {
+  width: 100%;
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.add-user-form button:hover {
+  background-color: #16a085;
+}
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d4ac0d;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: white;
+}
+/* Comments Section */
+.comments-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.comment {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment small {
+  color: #888;
+}
+
+.comment-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.comment-form button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #e55050;
+}
